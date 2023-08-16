@@ -1,0 +1,42 @@
+{
+  "manifestVersion": 1,
+  "name": "Savage Rifts Character Sheet",
+  "summary": "A freshly generated symbiote",
+  "descriptionFilePath": "/README.md",
+  "version": "0.0.1",
+  "license": "MIT",
+  "about": {
+    "website": "https://www.example.com/Savage+Rifts+Character+Sheet",
+    "authors": ["McSquizzy"]
+  },
+  "kind": "webView",
+  "entryPoint": "/index.html",
+  "api": {
+    "version": "0.1",
+    "initTimeout": 10,
+    "subscriptions": {
+      "dice": {
+        "onRollResults": "handleRollResult"
+      },
+      "symbiote": {
+        "onVisibilityEvent": "logSymbioteEvent",
+        "onStateChangeEvent": "logSymbioteEvent"
+      }
+    },
+    "interop": {
+      "id": "cc1f4155-3a44-4115-b334-de7a5c5cb36d"
+    }
+  },
+  "environment": {
+    "capabilities": [
+      "playAudio"
+    ],
+    "extras": [
+      "diceFinder",
+      "icons",
+      "fonts",
+      "colorStyles"
+    ],
+    "webViewBackgroundColor": "#000"
+  }
+}
